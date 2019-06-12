@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Allerta+Stencil" />
+    <title>War! What is it good for?</title>
+</head>
+<!-- make war...don't f it up. make it look good too because steve said
+    the js side of things is very easy. -->
+<body>
+    <div id="modal">
+        <div id="modalcontent">
+            
+            <span class="closebtn">&times;</span><!-- Put some text here to display in modal...maybe? -->
+        </div>
+    </div>
+    <div class="gameinfo">
+        <h1>War!</h1>
+        <p class="instructions">Game instructions!!! Clicking the WAR!!! button will pick a card from the deck. Whoever has the highest value card wins. If there is a tie then draw again.</p>
+    </div>
+    <div class="gamefield">
+        <!-- build out the playing field here (need everything in here) -->
+        <div class="card" id="player1card">
+            <img id="acardimg" src="https://opengameart.org/sites/default/files/card%20back%20red.png" alt="player 1's card">
+        </div>
+        <div class="gamestats">
+            <!-- <div class='stats' id="score">SCORE</div> -->
+            <div class='stats'>Ties</div>
+            <div class="stats" id="ties">0</div>
+            <div class='stats'>Player A Score</div>
+            <div class='stats' id="playerascore">0</div>
+            <div class='stats'>Player B Score</div>
+            <div class='stats' id="playerbscore">0</div>
+            <button id="draw">WAR!!!</button>
+            <button id="reset">Reset/Shuffle</button>
+            <!-- <button id="shuffle">Shuffle</button> -->
+        </div>
+        <div class="card" id="player2card">
+            <img id="bcardimg" src="https://opengameart.org/sites/default/files/card%20back%20red.png.jpg" alt="player 2's card">
+        </div>
+    </div>
+    
+<script src="js/script.js"></script>
+</body>
+</html>
