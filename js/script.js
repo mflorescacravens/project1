@@ -66,15 +66,15 @@ drawButton.addEventListener('click', function(e) {
 
     .then (function(json) {
         
-        if (parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 26 && parseInt(playerAWinStat.textContent) > parseInt(playerBWinStat.textContent)) {
+        if (parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 4 && parseInt(playerAWinStat.textContent) > parseInt(playerBWinStat.textContent)) {
             gameOverPAW();
             document.getElementById('a').textContent++;
             drawButton.disabled = true;
-        } else if(parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 26 && parseInt(playerBWinStat.textContent) > parseInt(playerAWinStat.textContent)) {
+        } else if(parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 4 && parseInt(playerBWinStat.textContent) > parseInt(playerAWinStat.textContent)) {
             gameOverPBW();
             document.getElementById('b').textContent++;
             drawButton.disabled = true;
-        } else if(parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 26 && parseInt(playerAWinStat.textContent) == parseInt(playerBWinStat.textContent)) {
+        } else if(parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 4 && parseInt(playerAWinStat.textContent) == parseInt(playerBWinStat.textContent)) {
             gameOverTie();
             drawButton.disabled = true;
         } else {
