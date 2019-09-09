@@ -99,11 +99,6 @@ p {
     justify-content: center;
 }
 
-/* .instructions {
-    margin: 50px 400px 50px 400px;
-    border: 1px solid deeppink;
-} */
-
 .gamestats {
     padding: 20px;
     margin: 30px 100px 30px 100px;
@@ -236,6 +231,7 @@ img {
     }
     to {
         top: 0px;
-        opacity: 1
+        opacity: 1;
+        
     }
 }

@@ -1,14 +1,3 @@
-
-
-
-// make war...don't f it up. make it look good too because steve said
-// the js side of things is very easy.
-
-// Variables
-
-// var roundCounter = 0;
-// const ROUNDS = 26;
-// var deckId;
 var cardNumValue = {
     2: 2,
     3: 3,
@@ -48,14 +37,8 @@ var modalContent = document.getElementById('modalcontent');
 // event listeners
 
 document.addEventListener("DOMContentLoaded", function() {
-    // drawButton = document.getElementById('draw');
-    // resetButton = document.getElementById('reset');
-    // shuffleButton = document.getElementById('shuffle');
     initGame();
-    
 });
-
-// gameOver();
 
 drawButton.addEventListener('click', function(e) {
     var url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
@@ -66,19 +49,18 @@ drawButton.addEventListener('click', function(e) {
 
     .then (function(json) {
         
-        if (parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 4 && parseInt(playerAWinStat.textContent) > parseInt(playerBWinStat.textContent)) {
+        if (parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 26 && parseInt(playerAWinStat.textContent) > parseInt(playerBWinStat.textContent)) {
             gameOverPAW();
             document.getElementById('a').textContent++;
             drawButton.disabled = true;
-        } else if(parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 4 && parseInt(playerBWinStat.textContent) > parseInt(playerAWinStat.textContent)) {
+        } else if(parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 26 && parseInt(playerBWinStat.textContent) > parseInt(playerAWinStat.textContent)) {
             gameOverPBW();
             document.getElementById('b').textContent++;
             drawButton.disabled = true;
-        } else if(parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 4 && parseInt(playerAWinStat.textContent) == parseInt(playerBWinStat.textContent)) {
+        } else if(parseInt(playerAWinStat.textContent) + parseInt(playerBWinStat.textContent) + parseInt(tiesStat.textContent) == 26 && parseInt(playerAWinStat.textContent) == parseInt(playerBWinStat.textContent)) {
             gameOverTie();
             drawButton.disabled = true;
         } else {
-            // this is effing everything up...why is it getting hung up
             cardA.src = json.cards[0].images.png;
             cardB.src = json.cards[1].images.png;
             cardAValue = json.cards[0].value;
@@ -105,7 +87,6 @@ resetButton.addEventListener('click', function() {
             cardA.src = "https://opengameart.org/sites/default/files/card%20back%20red.png";
             cardB.src = "https://opengameart.org/sites/default/files/card%20back%20red.png";
         });
-    // why tf is this not making the image go back to it's original state...?
 })
 
 
@@ -177,11 +158,3 @@ function initGame() {
             cardB.src = "https://opengameart.org/sites/default/files/card%20back%20red.png";
         });
 }
-
-
-
-
-// parse int is going to be needed for comparing values of cards.
-
-
-
