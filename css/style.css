@@ -28,6 +28,10 @@ h1 {
     animation-duration: 2.0s;
 }
 
+h1:hover {
+    color: blue;
+}
+
 
 .gameinfo {
     margin-left: 80px;
