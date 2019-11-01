@@ -2,12 +2,13 @@
   "name": "project1",
   "version": "1.0.0",
   "description": "### Technologies Used",
-  "main": "index.js",
+  "main": "js/script.js",
   "dependencies": {
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.4"
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node js/script.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

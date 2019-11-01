@@ -4,9 +4,16 @@
 
 Javascript, CSS, HTML
 
-### Special Instructions
+### Instructions
 
-N/A
+To run: 
+- "npx http-server" in terminal
+- go to localhost:8080
+
+How to play:
+- Click "draw" until either player 1 or 2 wins
+- Shuffle cards to start a new game
+
 
 ### Planning Details
 
